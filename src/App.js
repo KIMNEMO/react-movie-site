@@ -7,13 +7,13 @@ import Home from "./routes/Home";
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: `${process.env.PUBLIC_URL}`,
       element : <Home/>
     },
     {
-      path: "/movie/:id",
-      element : <Detail/>
-    },
+      path: `${process.env.PUBLIC_URL}/movie/:id`,
+      element : <Detail/>,
+    }
   ]);
   return <RouterProvider router={router}/>;
 }
